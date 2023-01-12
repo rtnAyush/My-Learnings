@@ -6,46 +6,46 @@
       git init
 
 ### --> add files inti staging area
-      $ git add <fileName or . >
+      git add <fileName or . >
       
 ### --> See the status of staging area
-      $ git status
+      git status
 
 
 ### --> Commit file to making end-point
-      $ git commit -m "description about commit"
+      git commit -m "description about commit"
 
 ###  --> undo commit
-      $ git rm --cached -r .
+      git rm --cached -r .
 
 ###  --> to view all the commit detais
-      $ git log
+      git log
 
 ### --> To view the changes in any files
-      $ git diff <file-name>
+      git diff <file-name>
 
 ###  --> for going to the last saved commit
-      $ git checkout <file-name>
+      git checkout <file-name>
 
 ###  --> to set remote repo to git Hub
-      $ git remote add origin <url>
+      git remote add origin <url>
 
 ###  --> push files to the gitHub
-      $ git push -u origin master
+      git push -u origin master
 
 ### --> to clone any  repository 
-      $ git clone <url>
+      git clone <url>
 
 ### --> To view all branches
-      $ git branch
+      git branch
 
 ### --> To create new branches
-      $ git branch <new-branch-name>
+      git branch <new-branch-name>
 
 ### --> To see other branches changes
-      $ git checkout <branch-name>
+      git checkout <branch-name>
 
 ###  --> To merge branches
-      $ git merge <name-of-main-branch>
+      git merge <name-of-main-branch>
 
 ### to close vim ->  :q!
