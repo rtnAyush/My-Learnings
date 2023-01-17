@@ -2,10 +2,10 @@
     mongosh
 
 ### Show all dataBase
-    show db
+    show dbs
 
 ### Show collection
-    show collection
+    show collections
     
 ### Make DataBase
     use shopDB
