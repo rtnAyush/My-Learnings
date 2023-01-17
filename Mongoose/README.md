@@ -15,7 +15,20 @@
       rating : Number,
       review: String
     });
-    
+
+### Schema Validation(Link-> https://mongoosejs.com/docs/validation.html)
+    const fruitSchema = new mongoose.Schema({
+        name: {
+            type: String,
+            required: [true, "Name not inserted"]
+        },
+        rating: {
+            type: Number,
+            max: 10,
+            min: 1
+        },
+        review: String
+    });
 ### Create a Collection(it will be created as 'fruits' ,it uses Lodmon to make all collection pural)
     const Fruit = mongoose.model("Fruit", fruitSchema);
 
@@ -46,7 +59,9 @@
       rating : 7,
       review : "very very Good"
     });
+    
     // it takes a array and a function with parameter err to show documents are inserted or not.
+    
     Fruit.insertMany([kiwi,orange,banana], function(err){
       if (err) {
         console.log(err);
@@ -56,12 +71,15 @@
     });
     
 # Read
+#### collection.find contaions anomonus function with two paramerters, first one tell about error and if error does not happend then second one will read all the documents value inside it. 
     Fruit.find(function(err, fruits){
       if (err) {
         console.log(err);
       } else {
+      
         fruits.forEach(function(fruit){
           console.log(fruit.name);
         });
+        
       }
     });
