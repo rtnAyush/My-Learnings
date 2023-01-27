@@ -83,3 +83,21 @@
         
       }
     });
+    
+# Delete
+
+## Delete array elements
+### Schema Used
+    const another_Schema = new mongoose.Schema({
+        name: String
+    )};
+    const schemaName = new mongoose.Schema({
+        name: String,
+        <array_name>: [another_Schema]
+    )};
+#### Here List is collection of name feild and their ecits array of items in it.
+    <ModelName>.findOneAndUpdate({name: listName}, {$pull:{<array_Name>:{_id: itemId}}}, function(err){
+      if (!err) {
+        res.redirect("/"+listName);
+      }
+    })
