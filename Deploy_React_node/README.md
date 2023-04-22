@@ -14,7 +14,7 @@
     sudo chmod -R userName@www-data /var/www/folder_name
     
     
-     sudo nano /etc/nginx/sites-available/folder_name
+    sudo chown -R <user_name>:www-data /var/www/folder_name
  
  ### add this to in it
      
