@@ -8,14 +8,13 @@
     
 ### mkdir servering folder
     sudo mkdir /var/www/folder_name
-    
-    sudo chmod 755 -R /var/www/folder_name
-    
-
+```
+sudo chmod 755 -R /var/www/folder_name
+```   
     sudo chown -R <user_name>:www-data /var/www/folder_name
-    
-    sudo nano /etc/nginx/sites-available/folder_name
- 
+```
+sudo nano /etc/nginx/sites-available/folder_name
+```
  ### add this to in it
      
      server {
@@ -44,47 +43,48 @@
     }
 
 ### restart nginx
-        sudo nginx -t
+    sudo nginx -t
   ![image](https://user-images.githubusercontent.com/98096047/233639231-28c1733d-85c1-4fd7-a6f9-35a6c3e07423.png)
 
 ### unlink and link
-        sudo unlink /etc/nginx/sites-enabled/default
-        sudo ln -s /etc/nginx/sites-available/folder_name /etc/nginx/sites-enabled/
-        
+    sudo unlink /etc/nginx/sites-enabled/default
+```   
+sudo ln -s /etc/nginx/sites-available/folder_name /etc/nginx/sites-enabled/
+```           
         
 ### restart nginx
-        sudo nginx -t
+    sudo nginx -t
   ![image](https://user-images.githubusercontent.com/98096047/233639231-28c1733d-85c1-4fd7-a6f9-35a6c3e07423.png)
 
 ### restart nginx
-        sudo systemctl restart nginx
+    sudo systemctl restart nginx
 
 
 ### restart nginx
-        sudo nginx -t
+    sudo nginx -t
   ![image](https://user-images.githubusercontent.com/98096047/233639231-28c1733d-85c1-4fd7-a6f9-35a6c3e07423.png)
 
 
 ## Now you two options
 ### 1. Upload only build folder to the /var/www/folder_name
 ### make a deploy.sh file 
-        # echo "switching to branch main"
-        # git checkout main
-        # git add .
-        # git commit -m "add add-business pages"
+    # echo "switching to branch main"
+    # git checkout main
+    # git add .
+    # git commit -m "add add-business pages"
 
 
-        echo "Building app..."
-        npm run build
+    echo "Building app..."
+    npm run build
 
-        echo "Deploying files to server..."
-        scp -r build/* root@<server_ip_address>/var/www/folder_name/
+    echo "Deploying files to server..."
+    scp -r build/* root@<server_ip_address>/var/www/folder_name/
 
-        echo "Done!"
+    echo "Done!"
         
 ### then run this in git_bash shell as ./deploy.sh and hit the password and now you can see your code on your public ip
 
-### Installing and configure Firewall
+### Installing and configure Firewall(No use in AWS)
     sudo apt install ufw
     
     sudo ufw enable
