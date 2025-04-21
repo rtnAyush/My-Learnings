@@ -8,8 +8,9 @@ The setup script automates the following:
 
 1. **System Updates**: Updates system packages
 2. **Node.js Installation**: Installs Node.js using NVM
-3. **Nginx Configuration**: Sets up Nginx as a reverse proxy for your applications
-4. **Process Management**: Installs PM2 for Node.js application management and auto-restart
+    - Ref https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04       
+4. **Nginx Configuration**: Sets up Nginx as a reverse proxy for your applications
+5. **Process Management**: Installs PM2 for Node.js application management and auto-restart
 
 ## Prerequisites
 
