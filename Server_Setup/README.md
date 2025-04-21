@@ -48,8 +48,9 @@ nano server-setup.sh
 
 After the script completes:
 
-1. Start your Node.js applications with PM2:
-2. Read the deploy script
+1. Excute the output command of pm2 startup(important)
+2. Start your Node.js applications with PM2:
+3. Read the deploy script
 
 ## Nginx Configuration Details
 
