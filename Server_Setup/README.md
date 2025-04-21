@@ -33,7 +33,7 @@ SERVER_NAME="your-ip-or-domain"  # Your server's IP address or domain name
 
 ```bash
 # Download the setup script
-wget https://github.com/rtnAyush/My-Learnings/Server_Setup/server-setup.sh
+wget https://raw.githubusercontent.com/rtnAyush/My-Learnings/refs/heads/main/Server_Setup/server-setup.sh
 
 # Make the script executable
 chmod +x server-setup.sh
