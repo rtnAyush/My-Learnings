@@ -1,6 +1,6 @@
 #!/bin/bash
-APP_NAME="oee"
-SERVER_NAME="13.61.50.204"
+APP_NAME="<Put You Name Here>"
+SERVER_NAME="<Your IP>"
 
 # Update the package list
 sudo apt update
@@ -25,7 +25,7 @@ server {
 
     # Proxy for WebSocket (ws://)
     location /ws/ {
-        proxy_pass http://localhost:8081/;
+        proxy_pass http://localhost:8081;
         proxy_http_version 1.1;
         proxy_set_header Upgrade \$http_upgrade;
         proxy_set_header Connection "Upgrade";
